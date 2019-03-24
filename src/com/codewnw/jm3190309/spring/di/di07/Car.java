@@ -1,17 +1,18 @@
 package com.codewnw.jm3190309.spring.di.di07;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Car {
 
-	@Autowired
-	@Qualifier("${car.ms}")
 	private MusicSystem musicSystem;
 
-	public Car() {
+	public Car(List<MusicSystem> musicSystems, @Value("${car.ms}") String musicSystemName) {
+		this.musicSystem = musicSystems.stream()
+				.filter(ms -> ms.getClass().getSimpleName().equalsIgnoreCase(musicSystemName)).findFirst().get();
 		System.out.println("Car is being menufactured.");
 	}
 
