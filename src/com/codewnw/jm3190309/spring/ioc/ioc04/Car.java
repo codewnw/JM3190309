@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component("myCar")
 public class Car {
-	
+
 	public Car(@Value("${car.name}") String name) {
-		System.out.println(name+" car is being menufactured.");
+		System.out.println(name + " car is being menufactured.");
 	}
 
 	public void driveTheCar() {
