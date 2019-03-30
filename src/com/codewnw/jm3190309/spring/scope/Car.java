@@ -1,4 +1,4 @@
-package com.codewnw.jm3190309.spring.ioc.ioc01;
+package com.codewnw.jm3190309.spring.scope;
 
 public class Car {
 	
