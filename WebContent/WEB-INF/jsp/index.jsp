@@ -11,5 +11,9 @@ I'm here...
 <br />
 <a href="login">Show Login Form</a> | 
 <a href="show-age-form">Show Age Form</a>
+
+<hr />
+<h2>Student</h2>
+<a href="show-student-form">Student Form</a>
 </body>
 </html>
