@@ -7,7 +7,7 @@
 <title>Login...</title>
 </head>
 <body>
-	<form action="performLogin">
+	<form method="post" action="performLogin">
 		<table>
 			<tr>
 				<td>Username</td>

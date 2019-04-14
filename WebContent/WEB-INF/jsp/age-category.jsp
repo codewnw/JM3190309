@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome...</title>
+<title>Age Category</title>
 </head>
 <body>
-I'm here...
-<br />
-<a href="login">Show Login Form</a> | 
-<a href="show-age-form">Show Age Form</a>
+	You age category is:
+	<b>${category}</b>
+	<br /> All categories are:
+	<b>${categories}</b>
 </body>
 </html>

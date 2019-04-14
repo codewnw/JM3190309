@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome...</title>
+<title>Age Form</title>
 </head>
 <body>
-I'm here...
-<br />
-<a href="login">Show Login Form</a> | 
-<a href="show-age-form">Show Age Form</a>
+<form action="process-age">
+<input type="number" name="age" placeholder="Enter you age">
+<input type="submit" placeholder="Who am I?">
+</form>
 </body>
 </html>
