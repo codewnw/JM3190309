@@ -7,9 +7,12 @@
 <title>Age Form</title>
 </head>
 <body>
+	<%@ include file="header.jsp"%>
+	<div class="container">
 <form action="process-age">
 <input type="number" name="age" placeholder="Enter you age">
 <input type="submit" placeholder="Who am I?">
 </form>
+</div>
 </body>
 </html>
