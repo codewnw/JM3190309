@@ -7,6 +7,7 @@
 <title>Login...</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
 	<form method="post" action="performLogin">
 		<table>
 			<tr>
