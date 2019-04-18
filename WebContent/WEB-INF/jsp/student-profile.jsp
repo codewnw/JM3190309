@@ -11,5 +11,10 @@
 First Name: ${student.firstName} <br />
 Last Name: ${student.lastName} <br />
 Age: ${student.age} <br />
+Gender: ${student.gender} <br />
+Country: ${student.country} <br />
+Courses: ${student.courses[0]}, &nbsp; ${student.courses[1]}, &nbsp; ${student.courses[2]}<br />
+Graduate: ${student.graduate} <br />
+Comment: ${student.comment} <br />
 </body>
 </html>
