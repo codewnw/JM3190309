@@ -10,6 +10,9 @@
 <h1>Student Profile</h1>
 First Name: ${student.firstName} <br />
 Last Name: ${student.lastName} <br />
+Last Name: ${student.regCode} <br />
+DOB: ${student.dob} <br />
+Course Start Date: ${student.courseStartDate} <br />
 Age: ${student.age} <br />
 Gender: ${student.gender} <br />
 Country: ${student.country} <br />

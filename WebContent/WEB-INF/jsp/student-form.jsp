@@ -4,6 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+.error{
+color: red
+}
+</style>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -12,6 +17,7 @@
 <title>Student Form</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>>
 	<form:form action="process-student-form" modelAttribute="student"
 		method="post">
 		<div class="container">
@@ -23,17 +29,44 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th scope="row"><label>First Name</label></th>
+						<th scope="row"><label>First Name*</label></th>
 						<td><form:input path="firstName"
-								placeholder="Enter first name" /></td>
+								placeholder="Enter first name" />
+								<form:errors path="firstName" cssClass="error" />
+								</td>
 					</tr>
 					<tr>
-						<th scope="row"><label>Last Name</label></th>
-						<td><form:input path="lastName" placeholder="Enter last name" /></td>
+						<th scope="row"><label>Last Name*</label></th>
+						<td><form:input path="lastName" placeholder="Enter last name" />
+						<form:errors path="lastName" cssClass="error" />
+						</td>
 					</tr>
+					
+					<tr>
+						<th scope="row"><label>Registration Code*</label></th>
+						<td><form:input path="regCode" placeholder="Enter Registration Code" />
+						<form:errors path="regCode" cssClass="error" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label>Date of Birth</label></th>
+						<td><form:input path="dob" placeholder="Enter Date of Birth" />
+						<form:errors path="dob" cssClass="error" />
+						</td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><label>Course Start Date</label></th>
+						<td><form:input path="courseStartDate" placeholder="Enter Course Start Date" />
+						<form:errors path="courseStartDate" cssClass="error" />
+						</td>
+					</tr>
+					
 					<tr>
 						<th scope="row"><label>Age</label></th>
-						<td><form:input path="age" placeholder="Enter age" /></td>
+						<td><form:input path="age" placeholder="Enter age" />
+						<form:errors path="age" cssClass="error" />
+						</td>
 					</tr>
 					<tr>
 						<th scope="row"><label>Gender</label></th>
