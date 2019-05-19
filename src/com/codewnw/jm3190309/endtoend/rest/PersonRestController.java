@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.infinispan.commons.dataconversion.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +25,7 @@ public class PersonRestController {
 	@Autowired
 	private PersonService personService;
 
-	@GetMapping("/{id}")
+	@GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_TYPE })
 	@Transactional
 	public Person getPerson(@PathVariable("id") Long id) {
 		return personService.get(id);
@@ -36,7 +37,7 @@ public class PersonRestController {
 		return personService.getPersons();
 	}
 
-	@PostMapping
+	@PostMapping(consumes = { MediaType.APPLICATION_JSON_TYPE })
 	@Transactional
 	public void save(@RequestBody Person person) {
 		personService.save(person);
