@@ -28,6 +28,7 @@ public class PersonRestController {
 	@GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_TYPE })
 	@Transactional
 	public Person getPerson(@PathVariable("id") Long id) {
+//		int i = 10/0;
 		return personService.get(id);
 	}
 
